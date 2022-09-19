@@ -86,6 +86,30 @@ public class BookRepositoryTest {
     }
 
     //4.책 수정
+    @Test
+    public void 책수정_test(){
+        //given
+        Long id = 1L;
+        String title = "JUnit5";
+        String author = "이재헌";
+        Book book = new Book(id, title, author);
+        //when
+        Book bookPS = bookRepository.save(book);
+
+//        bookRepository.findAll().stream()
+//                .forEach((b)-> {
+//                    System.out.println(b.getId());
+//                    System.out.println(b.getTitle());
+//                    System.out.println(b.getAuthor());
+//                    System.out.println("================================================================");
+//                });
+
+
+        //then
+        assertEquals(id,bookPS,getId());
+        assertEquals(title,bookPS,getTitle());
+        assertEquals(author,bookPS,getAuthor());
+    }
 
     //5.책 삭제
 
