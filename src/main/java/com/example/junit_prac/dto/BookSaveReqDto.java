@@ -1,8 +1,10 @@
 package com.example.junit_prac.dto;
 
 import com.example.junit_prac.entity.Book;
+import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 @Setter  //Controller에서 Setter가 호출되면서 Dto에 값이 채워짐.
 public class BookSaveReqDto {
 
