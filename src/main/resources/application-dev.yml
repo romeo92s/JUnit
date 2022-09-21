@@ -24,6 +24,10 @@ spring:
     properties:
       '[hibernate.format_sql]': true
 
+  output:
+    ansi:
+      enabled: always
+
 logging:
   level:
     '[org.springframework.web]': DEBUG
