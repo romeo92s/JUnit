@@ -67,9 +67,6 @@ public class BookServiceTest {
         //when
         List<BookRespDto> bookRespDtoList = bookService.책목록보기();
 
-        //print
-
-
         //then
         assertThat(bookRespDtoList.get(0).getTitle()).isEqualTo("JUnit");
         assertThat(bookRespDtoList.get(0).getAuthor()).isEqualTo("허니통통");
